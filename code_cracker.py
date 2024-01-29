@@ -1,7 +1,35 @@
 from itertools import permutations
 
-# Actual codes
-actual_codes = ['9999710']
+#Script to Crack the code from a code pad where the code is 4,5,6 or 7 digits long and used only the worn out digits [0, 1, 7, 9]
+
+#Example: 
+# 0 incorrect
+# 1 incorrect
+# 7 incorrect
+# 9 correct
+# 90 incorrect 
+# 91 incorrect 
+# 97 correct
+# 970 incorrect
+# 971 correct
+# 9710 correct
+
+# Code found: 9710
+# Amount of permutations: 10
+
+#We know this is the maximum attempts to get a correct code from the key pad since after every digit is entered we know if the entered digit was correct or not
+#We know these because the 4 digits are worn out so all of those 4 NEED to have been used in the code! 
+
+#With these in mind we can do the math using this python script.
+
+#When the code is 
+#4 digits long the maximum attempts to guranteed success is 10 tries
+#5 digits long the maximum attempts to guranteed success is 14 tries
+#6 digits long the maximum attempts to guranteed success is 18 tries
+#7 digits long the maximum attempts to guranteed success is 22 tries
+
+# The codes I've decided to use are the worst case scerario so I get the maximum attempts possible, but keep in mind all of the codes NEED to use all 4 of the worn out digits!
+actual_codes = ['9710' ,'99710' ,'999710' ,'9999710']
 
 # Digits that have been worn and have to be used in the code
 digits = ['0', '1', '7', '9']
